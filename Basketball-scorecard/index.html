@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Basketball Scorecard</title>
+		<meta name="description" content="Simple basketball scorecard web app" />
+		<link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+        
+	</head>
+	<body>
+
+        <div class="scorecard">
+            <div class="box">
+                <h1 class="title">HOME</h1>
+                <div class="counterbox">
+                    <p class="counterdigit" id="homeScore">0</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" id="oneHome" onclick="incrementOneHome()">+1</button>
+                    <button class="btn" id="twoHome"  onclick="incrementTwoHome()">+2</button>
+                    <button class="btn" id="threeHome" onclick="incrementThreeHome()">+3</button>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="title">GUEST</h1>
+                <div class="counterbox">
+                    <p class="counterdigit" id="guestScore">0</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn" id="oneGuest" onclick="incrementOneGuest()">+1</button>
+                    <button class="btn" id="twoGuest" onclick="incrementTwoGuest()">+2</button>
+                    <button class="btn" id="threeGuest" onclick="incrementThreeGuest()">+3</button>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        
+        <script src="index.js"></script>
+	</body>
+</html>
