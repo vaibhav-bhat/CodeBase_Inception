@@ -30,7 +30,7 @@ function generatePassword(pwdLen)
     }
     else if(pwdLen < 8)
     {
-        console.error("Password should be atelast 8 charecters long");
+        error("Password should be atelast 8 charecters long");
         
     }
     else
@@ -45,4 +45,27 @@ function generatePassword(pwdLen)
      return password
 }
 
+function copyPwd(containerId)
+{
+    const el = document.getElementById(containerId)
+    const textCopy = el.textContent
+    
+    try{
+        navigator.clipboard.writeText(textCopy)
+
+        const originalText = textCopy;
+        el.classList.add("copied")
+        el.innerText = "✨ Copied to Clipboard!"
+
+        // revert back to original text after copied
+        setTimeout(() => {
+            el.innerText = originalText
+            el.classList.remove("copied")
+        }, 1500);
+     }
+    catch(err)
+    {
+        console.log("failed to copy text ", err)
+    }
+}
 
